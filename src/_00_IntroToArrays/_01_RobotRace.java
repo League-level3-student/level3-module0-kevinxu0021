@@ -11,6 +11,7 @@ public class _01_RobotRace {
 	public static void main(String[] args) {
 		boolean end = false;
 		int robotNumber;
+		int circleMovement = 14;
 		// 2. create an array of 5 robots.
 		Robot[] robot = new Robot[7];
 		// 3. use a for loop to initialize the robots.
@@ -24,6 +25,7 @@ public class _01_RobotRace {
 			RobotX += 100;
 
 		}
+
 		while (end == false) {
 			// 5. use another for loop to iterate through the array and make each robot move
 			// a random amount less than 50.
@@ -50,6 +52,14 @@ public class _01_RobotRace {
 		// 8. try different races with different amounts of robots.
 
 		// 9. make the robots race around a circular track.
+		for (int i = 0; i < 360; i++) {
+			for (int j = 0; j < robot.length; j++) {
+				robot[j].move(circleMovement);
+				robot[j].turn(1);
+				circleMovement -= 2;
+			}
+			circleMovement += 14;
+		}
 
 	}
 
