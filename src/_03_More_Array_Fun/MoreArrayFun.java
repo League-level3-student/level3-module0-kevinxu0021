@@ -17,7 +17,7 @@ public class MoreArrayFun {
 		array[3] = "d";
 		array[4] = "e";
 
-		printOther(array);
+		printRandom(array);
 
 	}
 
@@ -78,8 +78,11 @@ public class MoreArrayFun {
 		Random random = new Random();
 		for (int i = 0; i < array.length; i++) {
 			output[index] = array[random.nextInt(array.length)];
+			index++;
 		}
-		System.out.println(output);
+		for (int i = 0; i < output.length; i++) {
+			System.out.println(output[i]);
+		}
 		return output;
 
 	}
